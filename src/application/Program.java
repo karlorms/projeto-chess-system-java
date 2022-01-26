@@ -16,7 +16,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		ChessMatch chessMatch = new ChessMatch();
-		List<ChessPiece> captured = new ArrayList<ChessPiece>();
+		List<ChessPiece> captured = new ArrayList<>();
 
 		while (true) {
 
@@ -37,7 +37,7 @@ public class Program {
 				ChessPositon target = UI.readChessPosition(sc);
 
 				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
-				if (captured != null) {
+				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}
 				
